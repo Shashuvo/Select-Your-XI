@@ -9,8 +9,7 @@ const Navbar = () => {
         <li><a>Schedule</a></li>
     </>
     return (
-        <div className='my-5'>
-            <div className="navbar w-11/12 mx-auto">
+            <div className="navbar w-11/12 mx-auto my-5">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -33,7 +32,6 @@ const Navbar = () => {
                     <a className="btn bg-white">0 Coin <TbCoinTakaFilled className='text-[#F39E09] h-5 w-5' /></a>
                 </div>
             </div>
-        </div>
     );
 };
 

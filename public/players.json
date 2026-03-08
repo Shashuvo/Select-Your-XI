@@ -1,0 +1,167 @@
+[
+    {
+      "id": 1,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Virat_Kohli.jpg",
+      "name": "Virat Kohli",
+      "country": "India",
+      "role": "Batsman",
+      "rating": 9.8,
+      "battingStyle": "Right-hand bat",
+      "bowlingStyle": "Right-arm medium",
+      "price": 1200000
+    },
+    {
+      "id": 2,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Babar_Azam_2022.jpg",
+      "name": "Babar Azam",
+      "country": "Pakistan",
+      "role": "Batsman",
+      "rating": 9.7,
+      "battingStyle": "Right-hand bat",
+      "bowlingStyle": "Right-arm offbreak",
+      "price": 1150000
+    },
+    {
+      "id": 3,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Rohit_Sharma_2019.jpg",
+      "name": "Rohit Sharma",
+      "country": "India",
+      "role": "Batsman",
+      "rating": 9.5,
+      "battingStyle": "Right-hand bat",
+      "bowlingStyle": "Right-arm offbreak",
+      "price": 1100000
+    },
+    {
+      "id": 4,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/David_Warner_2014.jpg",
+      "name": "David Warner",
+      "country": "Australia",
+      "role": "Batsman",
+      "rating": 9.3,
+      "battingStyle": "Left-hand bat",
+      "bowlingStyle": "Right-arm legbreak",
+      "price": 1000000
+    },
+    {
+      "id": 5,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/33/Jos_Buttler_2021.jpg",
+      "name": "Jos Buttler",
+      "country": "England",
+      "role": "Wicketkeeper-Batsman",
+      "rating": 9.4,
+      "battingStyle": "Right-hand bat",
+      "bowlingStyle": "None",
+      "price": 1080000
+    },
+    {
+      "id": 6,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Ben_Stokes_2019.jpg",
+      "name": "Ben Stokes",
+      "country": "England",
+      "role": "All-Rounder",
+      "rating": 9.6,
+      "battingStyle": "Left-hand bat",
+      "bowlingStyle": "Right-arm fast-medium",
+      "price": 1180000
+    },
+    {
+      "id": 7,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Hardik_Pandya_2022.jpg",
+      "name": "Hardik Pandya",
+      "country": "India",
+      "role": "All-Rounder",
+      "rating": 9.2,
+      "battingStyle": "Right-hand bat",
+      "bowlingStyle": "Right-arm fast-medium",
+      "price": 1050000
+    },
+    {
+      "id": 8,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/60/Shadab_Khan_2019.jpg",
+      "name": "Shadab Khan",
+      "country": "Pakistan",
+      "role": "All-Rounder",
+      "rating": 8.9,
+      "battingStyle": "Right-hand bat",
+      "bowlingStyle": "Right-arm legbreak",
+      "price": 900000
+    },
+    {
+      "id": 9,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Rashid_Khan_2020.jpg",
+      "name": "Rashid Khan",
+      "country": "Afghanistan",
+      "role": "Bowler",
+      "rating": 9.5,
+      "battingStyle": "Right-hand bat",
+      "bowlingStyle": "Right-arm legbreak",
+      "price": 1120000
+    },
+    {
+      "id": 10,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Shaheen_Afridi_2021.jpg",
+      "name": "Shaheen Afridi",
+      "country": "Pakistan",
+      "role": "Bowler",
+      "rating": 9.3,
+      "battingStyle": "Left-hand bat",
+      "bowlingStyle": "Left-arm fast",
+      "price": 1020000
+    },
+    {
+      "id": 11,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Trent_Boult_2019.jpg",
+      "name": "Trent Boult",
+      "country": "New Zealand",
+      "role": "Bowler",
+      "rating": 9.1,
+      "battingStyle": "Right-hand bat",
+      "bowlingStyle": "Left-arm fast-medium",
+      "price": 980000
+    },
+    {
+      "id": 12,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Jasprit_Bumrah_2019.jpg",
+      "name": "Jasprit Bumrah",
+      "country": "India",
+      "role": "Bowler",
+      "rating": 9.7,
+      "battingStyle": "Right-hand bat",
+      "bowlingStyle": "Right-arm fast",
+      "price": 1200000
+    },
+    {
+      "id": 13,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Glenn_Maxwell_2020.jpg",
+      "name": "Glenn Maxwell",
+      "country": "Australia",
+      "role": "All-Rounder",
+      "rating": 9.0,
+      "battingStyle": "Right-hand bat",
+      "bowlingStyle": "Right-arm offbreak",
+      "price": 970000
+    },
+    {
+      "id": 14,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Mohammad_Rizwan_2021.jpg",
+      "name": "Mohammad Rizwan",
+      "country": "Pakistan",
+      "role": "Wicketkeeper-Batsman",
+      "rating": 9.2,
+      "battingStyle": "Right-hand bat",
+      "bowlingStyle": "None",
+      "price": 1010000
+    },
+    {
+      "id": 15,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Kane_Williamson_2019.jpg",
+      "name": "Kane Williamson",
+      "country": "New Zealand",
+      "role": "Batsman",
+      "rating": 9.3,
+      "battingStyle": "Right-hand bat",
+      "bowlingStyle": "Right-arm offbreak",
+      "price": 1040000
+    }
+  ]

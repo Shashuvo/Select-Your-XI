@@ -5,7 +5,6 @@ const AvailablePlayers = ({ fetchPlayersData }) => {
     const playersData = use(fetchPlayersData)
     return (
         <div className='w-11/12 mx-auto my-20'>
-            <h1 className='font-bold text-3xl mb-8'>Available Players</h1>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
                 {
                     playersData.map(player => <PlayerCard key={player.id} player={player}></PlayerCard>)

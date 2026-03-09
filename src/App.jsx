@@ -38,7 +38,7 @@ function App() {
           <AvailablePlayers handleChoosePlayer={handleChoosePlayer} fetchPlayersData={fetchPlayersData}></AvailablePlayers>
         </Suspense> :
           <Suspense fallback={<p>data loading...</p>}>
-            <SelectedPlayers></SelectedPlayers>
+            <SelectedPlayers selectedPlayers={selectedPlayers}></SelectedPlayers>
           </Suspense>
       }
     </>

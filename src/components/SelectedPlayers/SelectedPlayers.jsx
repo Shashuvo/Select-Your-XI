@@ -1,11 +1,13 @@
 import React from 'react';
+import SelectedPlayerCard from './SelectedPlayerCard';
 
-const SelectedPlayers = () => {
+const SelectedPlayers = ({ selectedPlayers }) => {
+    console.log(selectedPlayers)
     return (
-        <div className='w-11/12 mx-auto mb-20'>
-            <div className='bg-white border-[#131313]/10 rounded-xl p-6 w-full shadow-sm'>
-                <h1>me</h1>
-            </div>
+        <div className='w-11/12 mx-auto mb-20 flex flex-col gap-6'>
+            {
+                selectedPlayers.map(player => <SelectedPlayerCard key={player.id} player={player}></SelectedPlayerCard>)
+            }
         </div>
     );
 };

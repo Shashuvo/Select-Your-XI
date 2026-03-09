@@ -13,6 +13,12 @@ const fetchPlayers = async () => {
 function App() {
 
   const [toggle, setToggle] = useState(true);
+  const [selectedPlayers, setSelectedPlayers] = useState([]);
+
+  const handleChoosePlayer = (player) => {
+    const newPlayer = [...selectedPlayers, player];
+    setSelectedPlayers(newPlayer);
+  }
 
   const fetchPlayersData = fetchPlayers();
 
@@ -24,14 +30,16 @@ function App() {
         <h1 className='font-bold text-3xl'>{toggle ? "Available Players" : "Selected Players"}</h1>
         <div>
           <button onClick={() => setToggle(true)} className={`py-2 px-7 border border-r-0 border-[#131313]/10 font-bold ${toggle ? "bg-[#E7FE29] text-[#131313]" : "bg-white text-[#131313]/60"}  rounded-l-2xl`}>Available</button>
-          <button onClick={() => setToggle(false)} className={`py-2 px-7 border border-l-0 border-[#131313]/10 font-bold ${toggle ? "bg-white text-[#131313]/60" : "bg-[#E7FE29] text-[#131313]"} rounded-r-2xl`}>Selected (0)</button>
+          <button onClick={() => setToggle(false)} className={`py-2 px-7 border border-l-0 border-[#131313]/10 font-bold ${toggle ? "bg-white text-[#131313]/60" : "bg-[#E7FE29] text-[#131313]"} rounded-r-2xl`}>Selected (<span>{selectedPlayers.length}</span>)</button>
         </div>
       </div>
       {
         toggle ? <Suspense fallback={<p>data loading...</p>}>
-          <AvailablePlayers fetchPlayersData={fetchPlayersData}></AvailablePlayers>
+          <AvailablePlayers handleChoosePlayer={handleChoosePlayer} fetchPlayersData={fetchPlayersData}></AvailablePlayers>
         </Suspense> :
-          <SelectedPlayers></SelectedPlayers>
+          <Suspense fallback={<p>data loading...</p>}>
+            <SelectedPlayers></SelectedPlayers>
+          </Suspense>
       }
     </>
   )

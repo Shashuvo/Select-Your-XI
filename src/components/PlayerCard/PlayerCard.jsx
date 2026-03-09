@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaFlag, FaUser } from 'react-icons/fa';
 
-const PlayerCard = ({ player }) => {
+const PlayerCard = ({ player, handleChoosePlayer }) => {
     const { name, image, country, role, rating, battingStyle, bowlingStyle, price } = player
     return (
         <div className="bg-white border-[#131313]/10 rounded-xl p-6 w-full shadow-sm flex flex-col gap-2">
@@ -51,7 +51,7 @@ const PlayerCard = ({ player }) => {
                     Price: ${price}
                 </span>
 
-                <button className="border px-3 py-1 rounded-md text-sm hover:bg-gray-100">
+                <button onClick={() => handleChoosePlayer(player)} className="border px-3 py-1 rounded-md text-sm hover:bg-gray-100">
                     Choose Player
                 </button>
             </div>

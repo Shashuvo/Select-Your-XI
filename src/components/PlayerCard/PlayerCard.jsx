@@ -1,9 +1,18 @@
 import React from 'react';
 import { FaFlag, FaUser } from 'react-icons/fa';
 
-const PlayerCard = ({ player, handleChoosePlayer, isPlayerSelected }) => {
+const PlayerCard = ({ player, handleChoosePlayer, isPlayerSelected, setBalance, balance }) => {
     const { name, image, country, role, rating, battingStyle, bowlingStyle, price, id } = player;
     const isSelected = isPlayerSelected(id);
+    const handlePlayer = player => {
+        if (balance < player.price) {
+            alert("not enough balance");
+        }
+        else {
+            handleChoosePlayer(player);
+            setBalance(balance - player.price);
+        }
+    }
     return (
         <div className="bg-white border-[#131313]/10 rounded-xl p-6 w-full shadow-sm flex flex-col gap-2">
 
@@ -54,7 +63,7 @@ const PlayerCard = ({ player, handleChoosePlayer, isPlayerSelected }) => {
 
                 <button
                     disabled={isSelected}
-                    onClick={() => { handleChoosePlayer(player); }}
+                    onClick={() => { handlePlayer(player); }}
                     className={`border px-3 py-1 rounded-md text-sm ${isSelected ? "bg-gray-100 text-gray-400 cursor-not-allowed" : "hover:bg-gray-100"}`}
                 >
                     {isSelected ? "Selected" : "Choose Player"}

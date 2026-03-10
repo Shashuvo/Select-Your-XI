@@ -16,6 +16,7 @@ function App() {
 
   const [toggle, setToggle] = useState(true);
   const [selectedPlayers, setSelectedPlayers] = useState([]);
+  const [balance, setBalance] = useState(0);
 
   const handleChoosePlayer = (player) => {
     const newPlayer = [...selectedPlayers, player];
@@ -34,8 +35,8 @@ function App() {
 
   return (
     <>
-      <Navbar></Navbar>
-      <Banner></Banner>
+      <Navbar balance={balance}></Navbar>
+      <Banner setBalance={setBalance}></Banner>
       <div className='flex flex-col-reverse gap-5 items-center md:gap-0 md:justify-between w-11/12 mx-auto mt-20 mb-8'>
         <h1 className='font-bold text-3xl mt-8'>{toggle ? "Available Players" : "Selected Players"}</h1>
         <div>
@@ -45,10 +46,10 @@ function App() {
       </div>
       {
         toggle ? <Suspense fallback={<p>data loading...</p>}>
-          <AvailablePlayers handleChoosePlayer={handleChoosePlayer} fetchPlayersData={fetchPlayersData} isPlayerSelected={isPlayerSelected}></AvailablePlayers>
+          <AvailablePlayers balance={balance} setBalance={setBalance} handleChoosePlayer={handleChoosePlayer} fetchPlayersData={fetchPlayersData} isPlayerSelected={isPlayerSelected}></AvailablePlayers>
         </Suspense> :
           <Suspense fallback={<p>data loading...</p>}>
-            <SelectedPlayers selectedPlayers={selectedPlayers} handleDeletePlayer={handleDeletePlayer}></SelectedPlayers>
+            <SelectedPlayers balance={balance} setBalance={setBalance} selectedPlayers={selectedPlayers} handleDeletePlayer={handleDeletePlayer}></SelectedPlayers>
           </Suspense>
       }
     </>

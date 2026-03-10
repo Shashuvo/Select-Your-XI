@@ -4,6 +4,7 @@ import Banner from './components/Banner/Banner'
 import Navbar from './components/Navbar/Navbar'
 import AvailablePlayers from './components/AvailablePlayers/AvailablePlayers';
 import SelectedPlayers from './components/SelectedPlayers/SelectedPlayers';
+import { ToastContainer } from 'react-toastify';
 
 const fetchPlayers = async () => {
   const res = await fetch("/players.json");
@@ -37,7 +38,7 @@ function App() {
     <>
       <Navbar balance={balance}></Navbar>
       <Banner setBalance={setBalance}></Banner>
-      <div className='flex flex-col-reverse gap-5 items-center md:gap-0 md:justify-between w-11/12 mx-auto mt-20 mb-8'>
+      <div className='flex flex-col-reverse md:flex-row gap-5 items-center md:gap-0 md:justify-between w-11/12 mx-auto mt-20 mb-8'>
         <h1 className='font-bold text-3xl mt-8'>{toggle ? "Available Players" : "Selected Players"}</h1>
         <div>
           <button onClick={() => setToggle(true)} className={`py-2 px-7 border border-r-0 border-[#131313]/10 font-bold ${toggle ? "bg-[#E7FE29] text-[#131313]" : "bg-white text-[#131313]/60"}  rounded-l-2xl`}>Available</button>
@@ -52,6 +53,7 @@ function App() {
             <SelectedPlayers balance={balance} setBalance={setBalance} selectedPlayers={selectedPlayers} handleDeletePlayer={handleDeletePlayer}></SelectedPlayers>
           </Suspense>
       }
+      <ToastContainer></ToastContainer>
     </>
   )
 }

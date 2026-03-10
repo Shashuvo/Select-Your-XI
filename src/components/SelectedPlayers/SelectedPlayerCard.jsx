@@ -1,9 +1,11 @@
 import React from 'react';
 import { RiDeleteBin6Line } from 'react-icons/ri';
+import { toast } from 'react-toastify';
 
 const SelectedPlayerCard = ({ player, handleDeletePlayer, balance, setBalance }) => {
     const { id, name, image, battingStyle, bowlingStyle } = player;
     const handleDelete = id => {
+        toast.success(`${player.name} has been removed!!!`)
         handleDeletePlayer(id);
         setBalance(balance + player.price);
     }

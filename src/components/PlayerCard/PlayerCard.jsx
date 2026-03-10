@@ -1,16 +1,23 @@
 import React from 'react';
 import { FaFlag, FaUser } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 const PlayerCard = ({ player, handleChoosePlayer, isPlayerSelected, setBalance, balance }) => {
     const { name, image, country, role, rating, battingStyle, bowlingStyle, price, id } = player;
     const isSelected = isPlayerSelected(id);
     const handlePlayer = player => {
-        if (balance < player.price) {
-            alert("not enough balance");
+        if (balance === 0) {
+            toast.warning("Claim Your Free Coins!");
+            return;
+        }
+        else if (balance < player.price) {
+            toast.warning("Not Enough Coins!");
+            return;
         }
         else {
             handleChoosePlayer(player);
             setBalance(balance - player.price);
+            toast.success(`Congrats! ${name} has been Selected.`)
         }
     }
     return (

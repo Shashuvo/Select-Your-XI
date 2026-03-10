@@ -20,6 +20,11 @@ function App() {
     setSelectedPlayers(newPlayer);
   }
 
+  const handleDeletePlayer = (id) => {
+    const remainingPlayers = selectedPlayers.filter(player => player.id !== id);
+    setSelectedPlayers(remainingPlayers);
+  }
+
   const fetchPlayersData = fetchPlayers();
 
   return (
@@ -38,7 +43,7 @@ function App() {
           <AvailablePlayers handleChoosePlayer={handleChoosePlayer} fetchPlayersData={fetchPlayersData}></AvailablePlayers>
         </Suspense> :
           <Suspense fallback={<p>data loading...</p>}>
-            <SelectedPlayers selectedPlayers={selectedPlayers}></SelectedPlayers>
+            <SelectedPlayers selectedPlayers={selectedPlayers} handleDeletePlayer={handleDeletePlayer}></SelectedPlayers>
           </Suspense>
       }
     </>

@@ -1,8 +1,8 @@
 import React from 'react';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 
-const SelectedPlayerCard = ({ player }) => {
-    const { name, image, battingStyle, bowlingStyle } = player;
+const SelectedPlayerCard = ({ player, handleDeletePlayer }) => {
+    const { id, name, image, battingStyle, bowlingStyle } = player;
     return (
         <div className='bg-white border-[#131313]/10 rounded-xl p-6 w-full shadow-sm'>
             <div className='flex justify-between items-center'>
@@ -14,7 +14,7 @@ const SelectedPlayerCard = ({ player }) => {
                         <span className='text-[#131313]/60'>{bowlingStyle}</span>
                     </div>
                 </div>
-                <RiDeleteBin6Line className='h-16 w-6 text-[#F14749]' />
+                <RiDeleteBin6Line onClick={() => handleDeletePlayer(id)} className='btn bg-white border-0 text-[#F14749]' />
             </div>
         </div>
     );

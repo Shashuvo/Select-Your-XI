@@ -10,6 +10,8 @@ const fetchPlayers = async () => {
   return res.json();
 }
 
+const fetchPlayersData = fetchPlayers();
+
 function App() {
 
   const [toggle, setToggle] = useState(true);
@@ -25,7 +27,10 @@ function App() {
     setSelectedPlayers(remainingPlayers);
   }
 
-  const fetchPlayersData = fetchPlayers();
+  const isPlayerSelected = (playerId) => {
+    return selectedPlayers.some(player => player.id === playerId);
+  }
+
 
   return (
     <>
@@ -40,7 +45,7 @@ function App() {
       </div>
       {
         toggle ? <Suspense fallback={<p>data loading...</p>}>
-          <AvailablePlayers handleChoosePlayer={handleChoosePlayer} fetchPlayersData={fetchPlayersData}></AvailablePlayers>
+          <AvailablePlayers handleChoosePlayer={handleChoosePlayer} fetchPlayersData={fetchPlayersData} isPlayerSelected={isPlayerSelected}></AvailablePlayers>
         </Suspense> :
           <Suspense fallback={<p>data loading...</p>}>
             <SelectedPlayers selectedPlayers={selectedPlayers} handleDeletePlayer={handleDeletePlayer}></SelectedPlayers>

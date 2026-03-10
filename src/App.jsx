@@ -31,8 +31,8 @@ function App() {
     <>
       <Navbar></Navbar>
       <Banner></Banner>
-      <div className='flex justify-between w-11/12 mx-auto mt-20 mb-8'>
-        <h1 className='font-bold text-3xl'>{toggle ? "Available Players" : "Selected Players"}</h1>
+      <div className='flex flex-col-reverse gap-5 items-center md:gap-0 md:justify-between w-11/12 mx-auto mt-20 mb-8'>
+        <h1 className='font-bold text-3xl mt-8'>{toggle ? "Available Players" : "Selected Players"}</h1>
         <div>
           <button onClick={() => setToggle(true)} className={`py-2 px-7 border border-r-0 border-[#131313]/10 font-bold ${toggle ? "bg-[#E7FE29] text-[#131313]" : "bg-white text-[#131313]/60"}  rounded-l-2xl`}>Available</button>
           <button onClick={() => setToggle(false)} className={`py-2 px-7 border border-l-0 border-[#131313]/10 font-bold ${toggle ? "bg-white text-[#131313]/60" : "bg-[#E7FE29] text-[#131313]"} rounded-r-2xl`}>Selected (<span>{selectedPlayers.length}</span>)</button>

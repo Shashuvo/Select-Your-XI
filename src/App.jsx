@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar'
 import AvailablePlayers from './components/AvailablePlayers/AvailablePlayers';
 import SelectedPlayers from './components/SelectedPlayers/SelectedPlayers';
 import { ToastContainer } from 'react-toastify';
+import Footer from './components/Footer/Footer';
 
 const fetchPlayers = async () => {
   const res = await fetch("/players.json");
@@ -53,6 +54,7 @@ function App() {
             <SelectedPlayers balance={balance} setBalance={setBalance} selectedPlayers={selectedPlayers} handleDeletePlayer={handleDeletePlayer}></SelectedPlayers>
           </Suspense>
       }
+      <Footer></Footer>
       <ToastContainer></ToastContainer>
     </>
   )

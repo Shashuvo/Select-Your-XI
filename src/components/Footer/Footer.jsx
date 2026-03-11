@@ -1,8 +1,12 @@
 import React from 'react';
+import logo from "../../assets/logo-footer.png"
 
 const Footer = () => {
     return (
         <div className='bg-[#06091A] text-white'>
+            <div className='flex justify-center pt-60'>
+                <img src={logo} alt="Logo Image" />
+            </div>
             <footer className="footer w-11/12 mx-auto sm:footer-horizontal py-10 grid grid-cols-1 md:grid-cols-3 gap-60">
                 <nav>
                     <h1 className='font-semibold text-lg mb-1'>About Us</h1>

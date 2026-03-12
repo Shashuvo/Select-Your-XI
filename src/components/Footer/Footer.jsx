@@ -7,10 +7,10 @@ const Footer = () => {
             <div className='flex justify-center pt-60'>
                 <img src={logo} alt="Logo Image" />
             </div>
-            <footer className="footer w-11/12 mx-auto sm:footer-horizontal py-10 grid grid-cols-1 md:grid-cols-3 gap-60">
+            <footer className="footer w-11/12 mx-auto sm:footer-horizontal py-10 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-60">
                 <nav>
                     <h1 className='font-semibold text-lg mb-1'>About Us</h1>
-                    <p className='opacity-60'>We are a passionate team <br /> dedicated to providing the best <br /> services to our customers.</p>
+                    <p className='opacity-60 w-full md:w-2/3'>We are a passionate team dedicated to providing the best services to our customers.</p>
                 </nav>
                 <nav>
                     <h6 className='font-semibold text-lg mb-1'>Legal</h6>
@@ -35,6 +35,10 @@ const Footer = () => {
                     </fieldset>
                 </form>
             </footer>
+            <div className='border-t border-[#FFFFFF]/15'></div>
+            <aside className='py-10 text-white/60 flex justify-center'>
+                <p>© {new Date().getFullYear()} - All right reserved by Select Your XI</p>
+            </aside>
         </div>
     );
 };
